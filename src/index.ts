@@ -1,10 +1,10 @@
-import { Is } from "ts-checkers";
+import {Is} from 'ts-checkers';
 
 export class Asserts {
 
     /**
      *
-     * @param input
+     * @param input type is any
      */
     public static assertString(input: any): asserts input is string {
         if (typeof input !== 'string') {
@@ -14,7 +14,7 @@ export class Asserts {
 
     /**
      *
-     * @param input
+     * @param input type is any
      */
     public static assertNumber(input: any): asserts input is number {
         if (typeof input !== 'number') {
@@ -24,7 +24,7 @@ export class Asserts {
 
     /**
      *
-     * @param input
+     * @param input type is any
      */
     public static assertBoolean(input: any): asserts input is boolean {
         if (typeof input !== 'boolean') {
@@ -34,7 +34,7 @@ export class Asserts {
 
     /**
      *
-     * @param input
+     * @param input type is any
      */
     public static assertNotNullOrUndefined(input: any) {
         if (Is.nullOrUndefined(input)) {
