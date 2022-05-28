@@ -1,7 +1,6 @@
 import { Is } from 'ts-checkers';
 
 export class Asserts {
-
   /**
    *
    * @param input type is any
