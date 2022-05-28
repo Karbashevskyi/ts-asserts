@@ -3,6 +3,11 @@ export declare class Asserts {
      *
      * @param input type is any
      */
+    static assertObject(input: any): asserts input is object;
+    /**
+     *
+     * @param input type is any
+     */
     static assertString(input: any): asserts input is string;
     /**
      *
