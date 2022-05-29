@@ -2,4 +2,4 @@
  *
  * @param input type is any
  */
-export declare function number(input: any): asserts input is number;
+export declare function NumberAssert(input: any): asserts input is number;

@@ -1,17 +1,18 @@
 import {Asserts} from '../lib';
 
 
-describe('Boolean', () => {
-    const message: string = 'Input must be a Boolean!';
+describe('BigInt', () => {
+
+    const message: string = 'Input must be a BigInt!';
     const dataForBadTesting = [
         {
-            value: BigInt(1)
-        },
-        {
-            value: Symbol
-        },
-        {
             value: ""
+        },
+        {
+            value: ''
+        },
+        {
+            value: ``
         },
         {
             value: {}
@@ -20,16 +21,19 @@ describe('Boolean', () => {
             value: []
         },
         {
+            value: 0
+        },
+        {
+            value: true
+        },
+        {
+            value: false
+        },
+        {
             value: null
         },
         {
             value: undefined
-        },
-        {
-            value: ''
-        },
-        {
-            value: ``
         },
         {
             value: Function
@@ -41,19 +45,15 @@ describe('Boolean', () => {
 
     it.each(dataForBadTesting)('Should false for $value', ({value}) => {
         try {
-            Asserts.Boolean(value);
+            Asserts.BigInt(value);
         } catch (error) {
             expect(error).toBeInstanceOf(TypeError);
             expect(error).toHaveProperty('message', message);
         }
     });
 
-    it('Should true for true', () => {
-        expect(Asserts.Boolean(true)).toBeUndefined();
-    });
-
-    it('Should true for false', () => {
-        expect(Asserts.Boolean(false)).toBeUndefined();
+    it('Should true for BigInt', () => {
+        expect(Asserts.BigInt(BigInt(12))).toBeUndefined();
     });
 
 });

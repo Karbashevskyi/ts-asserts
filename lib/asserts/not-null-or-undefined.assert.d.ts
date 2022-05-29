@@ -2,4 +2,4 @@
  *
  * @param input type is any
  */
-export declare function notNullOrUndefined(input: any): void;
+export declare function NotNullOrUndefinedAssert(input: any): void;

@@ -14,7 +14,7 @@ describe('NotNullOrUndefined', () => {
 
     it.each(dataForBadTesting)('Should false for $value', ({value}) => {
         try {
-            Asserts.notNullOrUndefined(value);
+            Asserts.NotNullOrUndefined(value);
         } catch (error) {
             expect(error).toBeInstanceOf(TypeError);
             expect(error).toHaveProperty('message', message);
@@ -22,6 +22,15 @@ describe('NotNullOrUndefined', () => {
     });
 
     const dataForGoodTesting = [
+        {
+            value: BigInt(1)
+        },
+        {
+            value: Symbol
+        },
+        {
+            value: {}
+        },
         {
             value: ""
         },
@@ -49,7 +58,7 @@ describe('NotNullOrUndefined', () => {
     ];
 
     it.each(dataForGoodTesting)('Should true for $value', ({value}) => {
-        expect(Asserts.notNullOrUndefined(value)).toBeUndefined();
+        expect(Asserts.NotNullOrUndefined(value)).toBeUndefined();
     });
 
 });

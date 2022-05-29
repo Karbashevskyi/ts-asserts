@@ -5,6 +5,15 @@ describe('Object', () => {
     const message: string = 'Input must be an Array!';
     const dataForBadTesting = [
         {
+            value: BigInt(1)
+        },
+        {
+            value: Symbol
+        },
+        {
+            value: {}
+        },
+        {
             value: ""
         },
         {
@@ -35,7 +44,7 @@ describe('Object', () => {
 
     it.each(dataForBadTesting)('Should false for $value', ({value}) => {
         try {
-            Asserts.array(value);
+            Asserts.Array(value);
         } catch (error) {
             expect(error).toBeInstanceOf(TypeError);
             expect(error).toHaveProperty('message', message);
@@ -43,7 +52,7 @@ describe('Object', () => {
     });
 
     it('Should true for []', () => {
-        expect(Asserts.array([])).toBeUndefined();
+        expect(Asserts.Array([])).toBeUndefined();
     });
 
 });

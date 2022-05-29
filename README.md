@@ -20,12 +20,14 @@ $ npm install ts-asserts
 import {Asserts} from 'ts-asserts';
 
 export function todo(input: any): void {
-    Asserts.assertArray(input);
-    Asserts.assertObject(input);
-    Asserts.assertString(input);
-    Asserts.assertNumber(input);
-    Asserts.assertBoolean(input);
-    Asserts.assertNotNullOrUndefined(input);
+    Asserts.Array(input);
+    Asserts.BigInt(input);
+    Asserts.Object(input);
+    Asserts.String(input);
+    Asserts.Number(input);
+    Asserts.Boolean(input);
+    Asserts.NotNullOrUndefined(input);
+    Asserts.Symbol(input);
 }
 
 ```

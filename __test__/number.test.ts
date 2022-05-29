@@ -5,7 +5,16 @@ describe('Number', () => {
     const message: string = 'Input must be a Number!';
     const dataForBadTesting = [
         {
+            value: BigInt(1)
+        },
+        {
+            value: Symbol
+        },
+        {
             value: ""
+        },
+        {
+            value: {}
         },
         {
             value: []
@@ -38,7 +47,7 @@ describe('Number', () => {
 
     it.each(dataForBadTesting)('Should false for $value', ({value}) => {
         try {
-            Asserts.number(value);
+            Asserts.Number(value);
         } catch (error) {
             expect(error).toBeInstanceOf(TypeError);
             expect(error).toHaveProperty('message', message);
@@ -46,7 +55,7 @@ describe('Number', () => {
     });
 
     it('Should true for 0', () => {
-        expect(Asserts.number(0)).toBeUndefined();
+        expect(Asserts.Number(0)).toBeUndefined();
     });
 
 });

@@ -6,6 +6,15 @@ describe('String', () => {
     const message: string = 'Input must be a String!';
     const dataForBadTesting = [
         {
+            value: BigInt(1)
+        },
+        {
+            value: Symbol
+        },
+        {
+            value: {}
+        },
+        {
             value: []
         },
         {
@@ -33,7 +42,7 @@ describe('String', () => {
 
     it.each(dataForBadTesting)('Should false for $value', ({value}) => {
         try {
-            Asserts.string(value);
+            Asserts.String(value);
         } catch (error) {
             expect(error).toBeInstanceOf(TypeError);
             expect(error).toHaveProperty('message', message);
@@ -41,15 +50,15 @@ describe('String', () => {
     });
 
     it('Should true for ""', () => {
-        expect(Asserts.string("")).toBeUndefined();
+        expect(Asserts.String("")).toBeUndefined();
     });
 
     it('Should true for ``', () => {
-        expect(Asserts.string(``)).toBeUndefined();
+        expect(Asserts.String(``)).toBeUndefined();
     });
 
     it('Should true for \'\'', () => {
-        expect(Asserts.string('')).toBeUndefined();
+        expect(Asserts.String('')).toBeUndefined();
     });
 
 });
