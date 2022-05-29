@@ -26,8 +26,21 @@ export function todo(input: any): void {
     Asserts.String(input);
     Asserts.Number(input);
     Asserts.Boolean(input);
-    Asserts.NotNullOrUndefined(input);
+    Asserts.NullOrUndefined(input);
     Asserts.Symbol(input);
+    Asserts.Null(input);
+    Asserts.Undefined(input);
+    // Not
+    Asserts.Not.Array(input);
+    Asserts.Not.BigInt(input);
+    Asserts.Not.Object(input);
+    Asserts.Not.String(input);
+    Asserts.Not.Number(input);
+    Asserts.Not.Boolean(input);
+    Asserts.Not.NullOrUndefined(input);
+    Asserts.Not.Symbol(input);
+    Asserts.Not.Null(input);
+    Asserts.Not.Undefined(input);
 }
 
 ```
