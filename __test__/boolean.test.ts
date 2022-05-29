@@ -2,7 +2,7 @@ import {Asserts} from '../lib';
 
 
 describe('Boolean', () => {
-    const message: string = 'Input must be a Boolean!';
+    const message: string = 'Type of argument is not correct.';
     const dataForBadTesting = [
         {
             value: BigInt(1)

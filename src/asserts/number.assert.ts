@@ -6,6 +6,6 @@ import { Is } from 'ts-checkers';
  */
 export function NumberAssert(input: any): asserts input is number {
   if (Is.Not.Number(input)) {
-    throw new TypeError('Input must be a Number!');
+    throw new TypeError('Type of argument is not correct.');
   }
 }

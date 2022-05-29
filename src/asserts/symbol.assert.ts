@@ -4,8 +4,8 @@ import { Is } from 'ts-checkers';
  *
  * @param input type is any
  */
-export function SymbolAssert(input: any): asserts input is [] {
+export function SymbolAssert(input: any): asserts input is Symbol {
   if (Is.Not.Symbol(input)) {
-    throw new TypeError('Input must be a Symbol!');
+    throw new TypeError('Type of argument is not correct.');
   }
 }

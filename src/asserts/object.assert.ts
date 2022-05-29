@@ -6,6 +6,6 @@ import { Is } from 'ts-checkers';
  */
 export function ObjectAssert(input: any): asserts input is object {
   if (Is.Not.Object(input)) {
-    throw new TypeError('Input must be an Object!');
+    throw new TypeError('Type of argument is not correct.');
   }
 }

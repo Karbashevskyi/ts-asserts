@@ -2,7 +2,7 @@ import {Asserts} from '../lib';
 
 
 describe('Number', () => {
-    const message: string = 'Input must be a Number!';
+    const message: string = 'Type of argument is not correct.';
     const dataForBadTesting = [
         {
             value: BigInt(1)

@@ -1,8 +1,8 @@
 import {Asserts} from '../lib';
 
 
-describe('NotNullOrUndefined', () => {
-    const message: string = 'Input must be not null or undefined!';
+describe('Not.NullOrUndefined', () => {
+    const message: string = 'Type of argument is not correct.';
     const dataForBadTesting = [
         {
             value: null
@@ -14,7 +14,7 @@ describe('NotNullOrUndefined', () => {
 
     it.each(dataForBadTesting)('Should false for $value', ({value}) => {
         try {
-            Asserts.NotNullOrUndefined(value);
+            Asserts.Not.NullOrUndefined(value)
         } catch (error) {
             expect(error).toBeInstanceOf(TypeError);
             expect(error).toHaveProperty('message', message);
@@ -58,7 +58,7 @@ describe('NotNullOrUndefined', () => {
     ];
 
     it.each(dataForGoodTesting)('Should true for $value', ({value}) => {
-        expect(Asserts.NotNullOrUndefined(value)).toBeUndefined();
+        expect(Asserts.Not.NullOrUndefined(value)).toBeUndefined();
     });
 
 });

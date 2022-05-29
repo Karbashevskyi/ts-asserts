@@ -6,6 +6,6 @@ import { Is } from 'ts-checkers';
  */
 export function ArrayAssert(input: any): asserts input is [] {
   if (Is.Not.Array(input)) {
-    throw new TypeError('Input must be an Array!');
+    throw new TypeError('Type of argument is not correct.');
   }
 }

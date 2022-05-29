@@ -3,7 +3,7 @@ import {Asserts} from '../lib';
 
 describe('Object', () => {
 
-    const message: string = 'Input must be an Object!';
+    const message: string = 'Type of argument is not correct.';
     const dataForBadTesting = [
         {
             value: BigInt(1)
