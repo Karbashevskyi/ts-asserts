@@ -6,31 +6,31 @@ import { ObjectAssert } from './object.assert';
 import { StringAssert } from './string.assert';
 import { SymbolAssert } from './symbol.assert';
 import { BigIntAssert } from './bigint.assert';
-import {UndefinedAssert} from './undefined.assert';
-import {NullAssert} from './null.assert';
+import { UndefinedAssert } from './undefined.assert';
+import { NullAssert } from './null.assert';
 
 export interface AssertsInterface {
-    Array: typeof ArrayAssert,
-    BigInt: typeof BigIntAssert,
-    Boolean: typeof BooleanAssert,
-    NullOrUndefined: typeof NullOrUndefinedAssert,
-    Null: typeof NullAssert,
-    Number: typeof NumberAssert,
-    Object: typeof ObjectAssert,
-    String: typeof StringAssert,
-    Symbol: typeof SymbolAssert,
-    Undefined: typeof UndefinedAssert,
+  Array: typeof ArrayAssert;
+  BigInt: typeof BigIntAssert;
+  Boolean: typeof BooleanAssert;
+  NullOrUndefined: typeof NullOrUndefinedAssert;
+  Null: typeof NullAssert;
+  Number: typeof NumberAssert;
+  Object: typeof ObjectAssert;
+  String: typeof StringAssert;
+  Symbol: typeof SymbolAssert;
+  Undefined: typeof UndefinedAssert;
 }
 
 export const AllAssertions: AssertsInterface = {
-    Array: ArrayAssert,
-    BigInt: BigIntAssert,
-    Boolean: BooleanAssert,
-    NullOrUndefined: NullOrUndefinedAssert,
-    Null: NullAssert,
-    Number: NumberAssert,
-    Object: ObjectAssert,
-    String: StringAssert,
-    Symbol: SymbolAssert,
-    Undefined: UndefinedAssert,
+  Array: ArrayAssert,
+  BigInt: BigIntAssert,
+  Boolean: BooleanAssert,
+  NullOrUndefined: NullOrUndefinedAssert,
+  Null: NullAssert,
+  Number: NumberAssert,
+  Object: ObjectAssert,
+  String: StringAssert,
+  Symbol: SymbolAssert,
+  Undefined: UndefinedAssert,
 };

@@ -1,22 +1,22 @@
-import {Is} from 'ts-checkers';
+import { Is } from 'ts-checkers';
 
-;import {AssertsInterface, AllAssertions} from '../asserts';
+import { AssertsInterface, AllAssertions } from '../asserts';
 
 /**
  * Handler for reverse boolean result.
  */
 const NotHandler: any = {
-    apply(target: any, thisArg: any, args: any) {
-        try {
-            if (Is.Undefined(target(...args))) {
-                throw new TypeError('Type of argument is not correct.');
-            }
-        } catch (error) {
-            if (!(error instanceof TypeError)) {
-                throw error;
-            }
-        }
-    },
+  apply(target: any, thisArg: any, args: any) {
+    try {
+      if (Is.Undefined(target(...args))) {
+        throw new TypeError('Type of argument is not correct.');
+      }
+    } catch (error) {
+      if (!(error instanceof TypeError)) {
+        throw error;
+      }
+    }
+  },
 };
 
 /**
@@ -25,7 +25,7 @@ const NotHandler: any = {
  * @param item must by object with string key and any value
  */
 const reduce: any = (object: { [p: string]: any }, item: { [p: string]: any }) => {
-    return Object.assign(object, item);
+  return Object.assign(object, item);
 };
 
 /**
@@ -33,7 +33,7 @@ const reduce: any = (object: { [p: string]: any }, item: { [p: string]: any }) =
  * @param key mu by string
  */
 const map: any = (key: string) => {
-    return { [key]: new Proxy((AllAssertions as any)[key], NotHandler) };
+  return { [key]: new Proxy((AllAssertions as any)[key], NotHandler) };
 };
 
 /**
