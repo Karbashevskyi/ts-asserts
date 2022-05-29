@@ -1,27 +1,14 @@
-export declare class Asserts {
-    /**
-     *
-     * @param input type is any
-     */
-    static assertObject(input: any): asserts input is object;
-    /**
-     *
-     * @param input type is any
-     */
-    static assertString(input: any): asserts input is string;
-    /**
-     *
-     * @param input type is any
-     */
-    static assertNumber(input: any): asserts input is number;
-    /**
-     *
-     * @param input type is any
-     */
-    static assertBoolean(input: any): asserts input is boolean;
-    /**
-     *
-     * @param input type is any
-     */
-    static assertNotNullOrUndefined(input: any): void;
-}
+import { array } from './asserts/array.assert';
+import { boolean } from './asserts/boolean.assert';
+import { notNullOrUndefined } from './asserts/not-null-or-undefined.assert';
+import { number } from './asserts/number.assert';
+import { object } from './asserts/object.assert';
+import { string } from './asserts/string.assert';
+export declare const Asserts: {
+    array: typeof array;
+    boolean: typeof boolean;
+    notNullOrUndefined: typeof notNullOrUndefined;
+    number: typeof number;
+    object: typeof object;
+    string: typeof string;
+};
