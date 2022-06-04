@@ -8,13 +8,15 @@ import { SymbolAssert } from './symbol.assert';
 import { BigIntAssert } from './bigint.assert';
 import { UndefinedAssert } from './undefined.assert';
 import { NullAssert } from './null.assert';
+import { FunctionAssert } from './function.assert';
 
 export interface AssertsInterface {
   Array: typeof ArrayAssert;
   BigInt: typeof BigIntAssert;
   Boolean: typeof BooleanAssert;
-  NullOrUndefined: typeof NullOrUndefinedAssert;
+  Function: typeof FunctionAssert;
   Null: typeof NullAssert;
+  NullOrUndefined: typeof NullOrUndefinedAssert;
   Number: typeof NumberAssert;
   Object: typeof ObjectAssert;
   String: typeof StringAssert;
@@ -26,8 +28,9 @@ export const AllAssertions: AssertsInterface = {
   Array: ArrayAssert,
   BigInt: BigIntAssert,
   Boolean: BooleanAssert,
-  NullOrUndefined: NullOrUndefinedAssert,
+  Function: FunctionAssert,
   Null: NullAssert,
+  NullOrUndefined: NullOrUndefinedAssert,
   Number: NumberAssert,
   Object: ObjectAssert,
   String: StringAssert,

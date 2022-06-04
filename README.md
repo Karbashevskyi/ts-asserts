@@ -22,24 +22,26 @@ import {Asserts} from 'ts-asserts';
 export function todo(input: any): void {
     Asserts.Array(input);
     Asserts.BigInt(input);
+    Asserts.Boolean(input);
+    Asserts.Function(input);
+    Asserts.Null(input);
+    Asserts.NullOrUndefined(input);
+    Asserts.Number(input);
     Asserts.Object(input);
     Asserts.String(input);
-    Asserts.Number(input);
-    Asserts.Boolean(input);
-    Asserts.NullOrUndefined(input);
     Asserts.Symbol(input);
-    Asserts.Null(input);
     Asserts.Undefined(input);
     // Not
     Asserts.Not.Array(input);
     Asserts.Not.BigInt(input);
+    Asserts.Not.Boolean(input);
+    Asserts.Not.Function(input);
+    Asserts.Not.Null(input);
+    Asserts.Not.NullOrUndefined(input);
+    Asserts.Not.Number(input);
     Asserts.Not.Object(input);
     Asserts.Not.String(input);
-    Asserts.Not.Number(input);
-    Asserts.Not.Boolean(input);
-    Asserts.Not.NullOrUndefined(input);
     Asserts.Not.Symbol(input);
-    Asserts.Not.Null(input);
     Asserts.Not.Undefined(input);
 }
 
